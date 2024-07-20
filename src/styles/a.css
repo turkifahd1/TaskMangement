@@ -1,0 +1,293 @@
+/* styles.css */
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.user-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.user-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: calc(33.333% - 20px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.user-card .content {
+  padding: 20px;
+}
+
+.user-card h3 {
+  margin-top: 0;
+  color: #333;
+}
+
+.user-card p {
+  color: #666;
+  margin: 5px 0;
+}
+
+.user-card .actions {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 20px;
+  border-top: 1px solid #f0f0f0;
+}
+
+.user-card .actions a,
+.user-card .actions button {
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+.user-card .actions a {
+  background-color: #007bff;
+}
+
+.user-card .actions a:hover {
+  background-color: #0056b3;
+}
+
+.user-card .actions button {
+  background-color: #dc3545;
+  border: none;
+  cursor: pointer;
+}
+
+.user-card .actions button:hover {
+  background-color: #c82333;
+}
+
+@media (max-width: 768px) {
+  .user-card {
+    width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 480px) {
+  .user-card {
+    width: 100%;
+  }
+}
+
+
+.user-list-container{
+  margin-top: 150px;
+}
+
+
+
+.aa{
+  margin-top: 200px;
+}
+.zz{
+  margin-top: 20px;
+  margin-left: 540px;
+}
+
+
+
+
+
+
+
+
+
+/* / */
+/* editUser.css */
+
+.edit-user-container {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  margin-top: 40px;
+  
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.edit-user-form-container {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 600px;
+  margin: auto;
+}
+
+.edit-user-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.form-input {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  font-size: 1rem;
+  width: 100%;
+}
+
+.submit-button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 12px;
+  border-radius: 4px;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+}
+
+.submit-button:disabled {
+  background-color: #c0c0c0;
+  cursor: not-allowed;
+}
+
+
+/* a.css */
+
+.user-list-container {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.user-list-content {
+  max-width: 800px;
+  margin: auto;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.loading-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.user-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.user-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 100%;
+  max-width: 300px;
+}
+
+.user-info {
+  margin-bottom: 15px;
+}
+
+.user-name {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.user-email, .user-role {
+  font-size: 1rem;
+  color: #666;
+}
+
+.user-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.edit-button, .delete-button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.edit-button:hover {
+  background-color: #0056b3;
+}
+
+.delete-button {
+  background-color: #dc3545;
+}
+
+.delete-button:hover {
+  background-color: #c82333;
+}
+
+
+
+
+

@@ -1,22 +1,29 @@
-// src/App.js
-import React, { useState } from 'react';
-import TaskList from './components/TaskList';
-import TaskForm from './components/TaskForm';
-
-function App() {
-  const [tasks, setTasks] = useState([]);
-
-  const addTask = (task) => {
-    setTasks([...tasks, task]);
-  };
-
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import LoginPage from './page/LoginPage';
+import AdminDashboard from './page/AdminDashboard';
+import UserDashboard from './page/UserDashboard';
+import UserList from '../src/page/UserList';
+import EditUser from '../src/page/EditUser';
+import CreateTask from '../src/page/CreateTask';
+import Home from './page/home';
+import Register from '../src/page/register'
+const App = () => {
   return (
-    <div className="container mx-auto my-5">
-      <h1 className="text-3xl font-bold mb-5">Task Manager</h1>
-      <TaskForm addTask={addTask} />
-      <TaskList tasks={tasks} />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<LoginPage />} />
+        <Route path="/user-dashboard" element={<Home />} />
+        <Route path="/admin-dashboard" element={<AdminDashboard />} />
+        <Route path="/user-dashboard" element={<UserDashboard />} />
+        <Route path="/user-list" element={<UserList />} />
+        <Route path="/edit/:userId" element={<EditUser />} />
+        <Route path="/create-task" element={<CreateTask />} />
+          <Route path="/tasks" element={<UserDashboard />} />
+          <Route path="/register" element={<Register />} />
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;
