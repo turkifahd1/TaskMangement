@@ -1,16 +1,7 @@
-
-
-
-
-
-
-
-
-
-
+// EditUser.js
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import Header from '../compunet/Header';
+import Header from '../compunet/Header'; // تأكد من صحة المسار
 
 const EditUser = () => {
   const { userId } = useParams(); // استخدام useParams للحصول على معرف المستخدم من عنوان الURL
@@ -86,68 +77,67 @@ const EditUser = () => {
   return (
     <div>
       <Header />
-      <div className=" ss">
+      <div className="edit-user-container">
         <h2 className="text-2xl font-bold mb-4">تعديل بيانات المستخدم</h2>
-        <form onSubmit={handleSubmit} className="space-y-4">
-          <div className="flex items-center space-x-4">
-            <label htmlFor="name" className="text-lg font-semibold">الاسم:</label>
+        <form onSubmit={handleSubmit} className="edit-user-form">
+          <div className="form-group">
+            <label htmlFor="name" className="form-label">الاسم:</label>
             <input
               type="text"
               id="name"
               name="name"
               value={userData.name}
               onChange={handleInputChange}
-              className="border border-gray-300 rounded-md px-3 py-2 w-64"
+              className="form-input"
               required
             />
           </div>
-          <div className="flex items-center space-x-4">
-            <label htmlFor="email" className="text-lg font-semibold">البريد الإلكتروني:</label>
+          <div className="form-group">
+            <label htmlFor="email" className="form-label">البريد الإلكتروني:</label>
             <input
               type="email"
               id="email"
               name="email"
               value={userData.email}
               onChange={handleInputChange}
-              className="border border-gray-300 rounded-md px-3 py-2 w-64"
+              className="form-input"
               required
             />
           </div>
-          <div className="flex items-center space-x-4">
-            <label htmlFor="password" className="text-lg font-semibold">كلمة السر:</label>
+          <div className="form-group">
+            <label htmlFor="password" className="form-label">كلمة السر:</label>
             <input
               type="password"
               id="password"
               name="password"
               value={userData.password}
               onChange={handleInputChange}
-              className="border border-gray-300 rounded-md px-3 py-2 w-64"
+              className="form-input"
               required
             />
           </div>
-          <div className="flex items-center space-x-4">
-            <label htmlFor="role" className="text-lg font-semibold">الدور:</label>
+          <div className="form-group">
+            <label htmlFor="role" className="form-label">الدور:</label>
             <select
               id="role"
               name="role"
               value={userData.role}
               onChange={handleInputChange}
-              className="border border-gray-300 rounded-md px-3 py-2 w-64"
+              className="form-select"
               required
             >
               <option value="admin">Admin</option>
               <option value="user">User</option>
             </select>
           </div>
-          <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600 focus:outline-none">
+          <button type="submit" className="form-button">
             {isUpdating ? 'جارٍ التحديث...' : 'حفظ التغييرات'}
           </button>
         </form>
-        {updateMessage && <p className="text-red-500 mt-4">{updateMessage}</p>}
+        {updateMessage && <p className="update-message">{updateMessage}</p>}
       </div>
     </div>
   );
 };
 
 export default EditUser;
-

@@ -8,6 +8,8 @@ import EditUser from '../src/page/EditUser';
 import CreateTask from '../src/page/CreateTask';
 import Home from './page/home';
 import Register from '../src/page/register'
+
+
 const App = () => {
   return (
     <Router>
@@ -21,6 +23,7 @@ const App = () => {
         <Route path="/create-task" element={<CreateTask />} />
           <Route path="/tasks" element={<UserDashboard />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/addTask/:userId" element={<CreateTask />}  />
       </Routes>
     </Router>
   );

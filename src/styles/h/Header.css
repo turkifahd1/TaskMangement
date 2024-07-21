@@ -1,0 +1,69 @@
+/* Header.css */
+
+/* الأساسيات */
+.header {
+  background-color: #2d3748; /* لون خلفية رمادي داكن */
+  padding: 16px; /* تباعد داخلي */
+}
+
+.container {
+  max-width: 1200px; /* عرض أقصى للحاوية */
+  margin: 0 auto; /* محاذاة المركز */
+  display: flex;
+  flex-direction: column; /* ترتيب العناصر عموديًا افتراضيًا */
+  align-items: center; /* محاذاة العناصر في الوسط */
+}
+
+.logo {
+  color: #ffffff; /* لون النص الأبيض */
+  font-size: 24px; /* حجم الخط */
+  font-weight: bold; /* سمك الخط */
+  text-decoration: none; /* إزالة التسطير من الروابط */
+  margin-bottom: 8px; /* تباعد أسفل الشعار */
+}
+
+.welcome-text {
+  color: #ffffff; /* لون النص الأبيض */
+  margin-bottom: 16px; /* تباعد أسفل النص */
+}
+
+.nav {
+  display: flex;
+  flex-direction: column; /* ترتيب الروابط عموديًا افتراضيًا */
+  align-items: center; /* محاذاة العناصر في الوسط */
+}
+
+.nav-link {
+  color: #ffffff; /* لون النص الأبيض */
+  text-decoration: none; /* إزالة التسطير من الروابط */
+  margin: 4px 0; /* تباعد بين الروابط */
+  font-size: 18px; /* حجم الخط */
+}
+
+.nav-link:hover {
+  color: #e2e8f0; /* تغيير اللون عند التمرير */
+}
+
+/* استعلامات الوسائط لتحسين التوافق عبر الشاشات المختلفة */
+
+/* الشاشات الكبيرة */
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row; /* ترتيب العناصر أفقيًا على الشاشات الكبيرة */
+    justify-content: space-between; /* توزيع العناصر بشكل متساوي */
+    align-items: center; /* محاذاة العناصر في الوسط */
+  }
+
+  .welcome-text {
+    margin-bottom: 0; /* إزالة التباعد السفلي على الشاشات الكبيرة */
+  }
+
+  .nav {
+    flex-direction: row; /* ترتيب الروابط أفقيًا */
+    margin: 0; /* إزالة التباعد */
+  }
+
+  .nav-link {
+    margin: 0 8px; /* تباعد أفقي بين الروابط */
+  }
+}

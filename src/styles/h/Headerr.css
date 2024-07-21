@@ -1,0 +1,143 @@
+/* Headerr.css */
+
+/* الأساسيات */
+.header {
+  background-color: #2d3748; /* لون خلفية رمادي داكن */
+  color: #ffffff; /* لون النص الأبيض */
+  padding: 16px; /* تباعد داخلي */
+  margin-bottom: 16px; /* تباعد أسفل الشريط */
+}
+
+.container {
+  max-width: 1200px; /* عرض أقصى للحاوية */
+  margin: 0 auto; /* محاذاة المركز */
+  display: flex;
+  justify-content: space-between; /* توزيع العناصر بشكل متساوي */
+  align-items: center; /* محاذاة العناصر في الوسط */
+}
+
+.logo {
+  font-size: 24px; /* حجم الخط */
+  font-weight: bold; /* سمك الخط */
+  text-decoration: none; /* إزالة التسطير من الروابط */
+}
+
+.nav-links {
+  display: flex;
+  gap: 16px; /* تباعد بين الروابط */
+}
+
+.nav-link {
+  color: #ffffff; /* لون النص الأبيض */
+  text-decoration: none; /* إزالة التسطير من الروابط */
+  font-size: 16px; /* حجم الخط */
+}
+
+.nav-link:hover {
+  color: #e2e8f0; /* تغيير اللون عند التمرير */
+}
+
+/* استعلامات الوسائط لتحسين التوافق عبر الشاشات المختلفة */
+
+/* الشاشات الصغيرة */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* ترتيب العناصر عموديًا */
+    text-align: center; /* محاذاة النصوص في الوسط */
+  }
+
+  .nav-links {
+    flex-direction: column; /* ترتيب الروابط عموديًا */
+    gap: 8px; /* تقليل التباعد بين الروابط */
+  }
+}
+
+
+
+
+/* EditUser.css */
+
+/* الأساسيات */
+.edit-user-container {
+  padding: 20px;
+  max-width: 800px; /* عرض أقصى للحاوية */
+  margin: 0 auto; /* محاذاة المركز */
+}
+
+.edit-user-form {
+  background-color: #f9f9f9; /* لون خلفية النموذج */
+  padding: 20px; /* تباعد داخلي */
+  border-radius: 8px; /* حواف دائرية */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* ظل خفيف */
+}
+
+.form-group {
+  margin-bottom: 16px; /* تباعد أسفل كل مجموعة من الحقول */
+}
+
+.form-label {
+  display: block; /* عرض كل تسميات الحقول ككتلة */
+  font-size: 16px; /* حجم الخط */
+  font-weight: bold; /* سمك الخط */
+  margin-bottom: 8px; /* تباعد أسفل التسمية */
+  color: #333; /* لون النص */
+}
+
+.form-input, .form-select {
+  width: 100%; /* ملء العرض الكامل */
+  padding: 12px; /* تباعد داخلي */
+  border: 1px solid #ccc; /* إطار خفيف */
+  border-radius: 4px; /* حواف دائرية */
+}
+
+.form-input:focus, .form-select:focus {
+  border-color: #007bff; /* تغيير لون الإطار عند التمرير */
+  outline: none; /* إزالة التسطير الافتراضي */
+}
+
+.form-button {
+  width: 100%; /* ملء العرض الكامل */
+  padding: 12px; /* تباعد داخلي */
+  background-color: #007bff; /* لون الخلفية */
+  color: #fff; /* لون النص */
+  border: none; /* إزالة الإطار */
+  border-radius: 4px; /* حواف دائرية */
+  font-size: 16px; /* حجم الخط */
+  cursor: pointer; /* تغيير شكل المؤشر */
+}
+
+.form-button:hover {
+  background-color: #0056b3; /* لون الخلفية عند التمرير */
+}
+
+.update-message {
+  margin-top: 16px; /* تباعد أعلى الرسالة */
+  color: #e53e3e; /* لون الرسالة عند حدوث خطأ */
+}
+
+/* استعلامات الوسائط لتحسين التوافق عبر الشاشات المختلفة */
+
+/* الشاشات الكبيرة */
+@media (min-width: 1024px) {
+  .edit-user-container {
+    padding: 30px; /* تباعد داخلي أكبر للشاشات الكبيرة */
+  }
+}
+
+/* الشاشات المتوسطة */
+@media (max-width: 1023px) and (min-width: 768px) {
+  .edit-user-container {
+    padding: 25px; /* تباعد داخلي معتدل للشاشات المتوسطة */
+  }
+}
+
+/* الشاشات الصغيرة */
+@media (max-width: 767px) {
+  .edit-user-container {
+    padding: 15px; /* تباعد داخلي أقل للشاشات الصغيرة */
+  }
+
+  .form-button {
+    padding: 10px; /* تقليل التباعد الداخلي في الزر */
+  }
+}

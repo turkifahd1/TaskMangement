@@ -1,7 +1,9 @@
+// CreateTask.js
 import React, { useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import Headerr from '../compunet/Headerr';
+import Headerr from '../compunet/Headerr'; // تأكد من صحة المسار
+import '../styles/h/CreateTask.css'
 const CreateTask = () => {
   const [newTaskTitle, setNewTaskTitle] = useState('');
   const [newTaskDescription, setNewTaskDescription] = useState('');
@@ -41,44 +43,44 @@ const CreateTask = () => {
   };
 
   return (
-  <div>
-    <Headerr/>
-    <div className="create-task-container">
-      <div className="create-task-form">
-        <h3 className="form-title">إنشاء مهمة جديدة</h3>
-        <form onSubmit={handleCreate}>
-          <input
-            type="text"
-            value={newTaskTitle}
-            onChange={(e) => setNewTaskTitle(e.target.value)}
-            placeholder="العنوان"
-            className="form-input"
-            required
-          />
-          <input
-            type="text"
-            value={newTaskDescription}
-            onChange={(e) => setNewTaskDescription(e.target.value)}
-            placeholder="الوصف"
-            className="form-input"
-            required
-          />
-          <input
-            type="text"
-            value={newTaskDayOfWeek}
-            onChange={(e) => setNewTaskDayOfWeek(e.target.value)}
-            placeholder="اليوم"
-            className="form-input"
-            required
-          />
-          <button type="submit" className="form-button">
-            {loading ? 'جارٍ الإنشاء...' : 'إنشاء'}
-          </button>
-        </form>
+    <div>
+      <Headerr />
+      <div className="create-task-container">
+        <div className="create-task-form">
+          <h3 className="form-title">إنشاء مهمة جديدة</h3>
+          <form onSubmit={handleCreate}>
+            <input
+              type="text"
+              value={newTaskTitle}
+              onChange={(e) => setNewTaskTitle(e.target.value)}
+              placeholder="العنوان"
+              className="form-input"
+              required
+            />
+            <input
+              type="text"
+              value={newTaskDescription}
+              onChange={(e) => setNewTaskDescription(e.target.value)}
+              placeholder="الوصف"
+              className="form-input"
+              required
+            />
+            <input
+              type="text"
+              value={newTaskDayOfWeek}
+              onChange={(e) => setNewTaskDayOfWeek(e.target.value)}
+              placeholder="اليوم"
+              className="form-input"
+              required
+            />
+            <button type="submit" className="form-button">
+              {loading ? 'جارٍ الإنشاء...' : 'إنشاء'}
+            </button>
+          </form>
+        </div>
+        <ToastContainer />
       </div>
-      <ToastContainer />
     </div>
-  </div>
   );
 };
 

@@ -1,18 +1,18 @@
 // Header.js
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../index.css';
+import '../styles/h/Header.css'; // استيراد ملف CSS
 
 const Header = () => {
   return (
-    <header className="bg-gray-800 p-4">
-      <div className="container mx-auto flex justify-between items-center">
-        <Link to="/admin-dashboard" className="text-white text-xl font-bold">Task Management</Link>
-        <div className="text-white">مرحبا، Admin!</div>
-        <nav className="space-x-4">
-          <Link to="/admin-dashboard" className="text-white">الرئيسية</Link>
-          <Link to="/user-list" className="text-white">لوحة التحكم</Link>
-          <Link to="/" className="text-white">تسجيل الخروج</Link>
+    <header className="header">
+      <div className="container">
+        <Link to="/admin-dashboard" className="logo">Task Management</Link>
+        <div className="welcome-text">مرحبا، Admin!</div>
+        <nav className="nav">
+          <Link to="/admin-dashboard" className="nav-link">الرئيسية</Link>
+          <Link to="/user-list" className="nav-link">لوحة التحكم</Link>
+          <Link to="/" className="nav-link">تسجيل الخروج</Link>
         </nav>
       </div>
     </header>

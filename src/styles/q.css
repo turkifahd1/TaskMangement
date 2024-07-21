@@ -91,3 +91,93 @@ body {
   margin-top: 200px;
 }
 
+
+
+/* q.css */
+
+/* الأساسيات */
+.home-container {
+  padding: 20px;
+  max-width: 800px; /* عرض أقصى للحاوية */
+  margin: 0 auto; /* محاذاة المركز */
+  text-align: center; /* محاذاة النصوص إلى الوسط */
+}
+
+.welcome-text {
+  font-size: 2rem; /* حجم الخط */
+  font-weight: bold; /* سمك الخط */
+  margin-bottom: 1rem; /* تباعد أسفل العنوان */
+}
+
+.intro-text {
+  margin-bottom: 1rem; /* تباعد أسفل الفقرة */
+  font-size: 1rem; /* حجم الخط */
+  color: #333; /* لون النص */
+}
+
+.button-group {
+  display: flex;
+  justify-content: center; /* محاذاة الأزرار في الوسط */
+  gap: 1rem; /* تباعد بين الأزرار */
+}
+
+.btn-create, .btn-view {
+  padding: 0.5rem 1rem; /* تباعد داخلي */
+  border-radius: 0.375rem; /* حواف دائرية */
+  color: #fff; /* لون النص */
+  text-decoration: none; /* إزالة التسطير */
+  font-size: 1rem; /* حجم الخط */
+  transition: background-color 0.3s ease; /* تأثير الانتقال عند تغيير الخلفية */
+}
+
+.btn-create {
+  background-color: #38a169; /* لون الخلفية */
+}
+
+.btn-create:hover {
+  background-color: #2f855a; /* لون الخلفية عند التمرير */
+}
+
+.btn-view {
+  background-color: #3182ce; /* لون الخلفية */
+}
+
+.btn-view:hover {
+  background-color: #2b6cb0; /* لون الخلفية عند التمرير */
+}
+
+/* استعلامات الوسائط لتحسين التوافق عبر الشاشات المختلفة */
+
+/* الشاشات الكبيرة */
+@media (min-width: 1024px) {
+  .home-container {
+    padding: 30px; /* تباعد داخلي أكبر للشاشات الكبيرة */
+  }
+}
+
+/* الشاشات المتوسطة */
+@media (max-width: 1023px) and (min-width: 768px) {
+  .home-container {
+    padding: 25px; /* تباعد داخلي معتدل للشاشات المتوسطة */
+  }
+}
+
+/* الشاشات الصغيرة */
+@media (max-width: 767px) {
+  .home-container {
+    padding: 15px; /* تباعد داخلي أقل للشاشات الصغيرة */
+  }
+
+  .welcome-text {
+    font-size: 1.5rem; /* حجم الخط أقل للشاشات الصغيرة */
+  }
+
+  .intro-text {
+    font-size: 0.875rem; /* حجم الخط أقل للشاشات الصغيرة */
+  }
+
+  .button-group {
+    flex-direction: column; /* ترتيب الأزرار عموديًا */
+    gap: 0.5rem; /* تباعد أقل بين الأزرار */
+  }
+}

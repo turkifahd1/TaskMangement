@@ -1,16 +1,18 @@
+// Headerr.js
 import React from 'react';
 import { Link } from 'react-router-dom';
+import '../styles/h/Headerr.css'; // استيراد ملف CSS
 
 const Headerr = () => {
   return (
-    <header className="bg-gray-800 text-white p-4 mb-4">
-      <nav className="container mx-auto flex justify-between">
-        <h1 className="text-2xl font-bold">Task Management</h1>
-        <div className="space-x-4">
-          <Link to="/create-task" className="hover:text-gray-300">إنشاء مهمة</Link>
-          <Link to="/tasks" className="hover:text-gray-300">قائمة المهام</Link>
-          <Link to="/user-dashboard" className="text-white">الرئيسية</Link>
-          <Link to="/" className="text-white">تسجيل الخروج</Link>
+    <header className="header">
+      <nav className="container">
+        <h1 className="logo">Task Management</h1>
+        <div className="nav-links">
+          <Link to="/create-task" className="nav-link">إنشاء مهمة</Link>
+          <Link to="/tasks" className="nav-link">قائمة المهام</Link>
+          <Link to="/user-dashboard" className="nav-link">الرئيسية</Link>
+          <Link to="/" className="nav-link">تسجيل الخروج</Link>
         </div>
       </nav>
     </header>

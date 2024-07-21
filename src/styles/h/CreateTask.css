@@ -1,0 +1,93 @@
+/* CreateTask.css */
+
+/* الأساسيات */
+.create-task-container {
+  padding: 20px;
+  max-width: 800px; /* عرض أقصى للحاوية */
+  margin: 0 auto; /* محاذاة المركز */
+}
+
+.create-task-form {
+  background-color: #f9f9f9; /* لون خلفية النموذج */
+  padding: 20px; /* تباعد داخلي */
+  border-radius: 8px; /* حواف دائرية */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* ظل خفيف */
+}
+
+.form-title {
+  font-size: 24px; /* حجم الخط */
+  font-weight: bold; /* سمك الخط */
+  margin-bottom: 20px; /* تباعد أسفل العنوان */
+  color: #333; /* لون النص */
+}
+
+.form-input {
+  width: 100%; /* ملء العرض الكامل */
+  padding: 12px; /* تباعد داخلي */
+  margin-bottom: 12px; /* تباعد بين الحقول */
+  border: 1px solid #ccc; /* إطار خفيف */
+  border-radius: 4px; /* حواف دائرية */
+}
+
+.form-input:focus {
+  border-color: #007bff; /* تغيير لون الإطار عند التمرير */
+  outline: none; /* إزالة التسطير الافتراضي */
+}
+
+.form-button {
+  width: 100%; /* ملء العرض الكامل */
+  padding: 12px; /* تباعد داخلي */
+  background-color: #007bff; /* لون الخلفية */
+  color: #fff; /* لون النص */
+  border: none; /* إزالة الإطار */
+  border-radius: 4px; /* حواف دائرية */
+  font-size: 16px; /* حجم الخط */
+  cursor: pointer; /* تغيير شكل المؤشر */
+}
+
+.form-button:hover {
+  background-color: #0056b3; /* لون الخلفية عند التمرير */
+}
+
+/* استعلامات الوسائط لتحسين التوافق عبر الشاشات المختلفة */
+
+/* الشاشات الكبيرة */
+@media (min-width: 1024px) {
+  .create-task-container {
+    padding: 30px; /* تباعد داخلي أكبر للشاشات الكبيرة */
+  }
+
+  .form-title {
+    font-size: 28px; /* حجم خط أكبر للشاشات الكبيرة */
+  }
+}
+
+/* الشاشات المتوسطة */
+@media (max-width: 1023px) and (min-width: 768px) {
+  .create-task-container {
+    padding: 25px; /* تباعد داخلي معتدل للشاشات المتوسطة */
+  }
+
+  .form-title {
+    font-size: 26px; /* حجم خط أكبر للشاشات المتوسطة */
+  }
+}
+
+/* الشاشات الصغيرة */
+@media (max-width: 767px) {
+  .create-task-container {
+    padding: 15px; /* تباعد داخلي أقل للشاشات الصغيرة */
+  }
+
+  .form-title {
+    font-size: 22px; /* حجم خط أصغر للشاشات الصغيرة */
+  }
+
+  .form-input {
+    padding: 10px; /* تقليل التباعد الداخلي في الحقول */
+  }
+
+  .form-button {
+    padding: 10px; /* تقليل التباعد الداخلي في الزر */
+  }
+}
